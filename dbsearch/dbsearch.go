@@ -341,9 +341,9 @@ func (s *Searcher) GetFace(mType *AllRows, sqlLine string,
 		return []map[string]interface{}{}, err
 	}
 
-	if R.UseFork && runtime.GOMAXPROCS(0) > 1 {
-		return s._GetFaceFork(mType, R)
-	}
+	// if R.UseFork && runtime.GOMAXPROCS(0) > 1 {
+	// 	return s._GetFaceFork(mType, R)
+	// }
 	return s._GetFaceNoFork(mType, R)
 }
 
